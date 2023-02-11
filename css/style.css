@@ -1,0 +1,158 @@
+@import "../css/reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;700&display=swap');
+
+
+html,body {
+  min-height: 100vh;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 15px 50px;
+  background: linear-gradient(92.7deg, #4CB8C4 0%, #3CD3AD 100%), #232323;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+  height: 54px;
+  background: #FFFFFF;
+  border-radius: 6px;
+}
+
+.title {
+  font-family: 'Rubik';
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 52px;
+  color: #FFFFFF;
+  padding-bottom: 20px;
+}
+
+.input {
+  flex-grow: 1;
+  padding: 15px;
+}
+
+.input::placeholder {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.btn {
+  width: 145px;
+  height: 54px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #FFFFFF;
+  background: #ED3052;
+  border-radius: 6px;
+  transition: background-color 0.2s ease-in;
+}
+
+.btn:hover {
+  background-color: #d80b31;
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  min-width: 390px;
+  height: 249px;
+  background: #FFFFFF;
+  box-shadow: 0px 5px 20px rgba(27, 108, 114, 0.25);
+  border-radius: 6px;
+}
+.card::before {
+	content: '';
+
+	position: absolute;
+	left: -5px;
+	bottom: 10px;
+	z-index: -1;
+
+	width: calc(100% - 5px);
+	height: 100%;
+
+	background: #ffffff;
+	box-shadow: 0px 5px 20px rgba(27, 108, 114, 0.25);
+	border-radius: 6px;
+}
+
+.card-city {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 33px;
+  color: #000000;
+}
+
+.card-city sup {
+  padding: 3px 5px;
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  color: #FFFFFF;
+  background: #E5464F;
+  border-radius: 6px;
+}
+
+.card-weather {
+  display: flex;
+  padding: 20px 0px 0px 0px;
+  column-gap: 50px;
+}
+
+.card-value {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 92px;
+  line-height: 100%;
+  color: #000000;
+}
+
+.card-img {
+  width: 130px;
+  height: 120px;
+}
+
+.card-description {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.footer {
+  margin-top: 700px;
+  padding: 8px 15px;
+  background: #E3F1EE;
+}
+
+.footer-title {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #2E7695;
+}
