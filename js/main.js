@@ -1,5 +1,4 @@
 import conditions from "./conditions.js";
-console.log(conditions);
 
 const apiKey = '4270df6b352e4dd5963132625231002';
 
@@ -33,9 +32,8 @@ header.insertAdjacentHTML('afterend', html);
 
 async function getWeather(city) {
   const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
-  const response = await fetch(url);
+   let response = await fetch(url);
   const data = await response.json();
-  console.log(data);
   return data;
 }
 
@@ -43,7 +41,7 @@ form.onsubmit = async function (e) {
   e.preventDefault();
   let city = input.value.trim()
 
-  const data = await getWeather(city)
+  let data = await getWeather(city)
 
   if (data.error) {
     removeCard();
@@ -51,16 +49,10 @@ form.onsubmit = async function (e) {
   } else {
     removeCard();
 
-    console.log(data.current.condition.code);
-
     const info = conditions.find((obj) => obj.code === data.current.condition.code);
-    console.log(info);
-    console.log(info.languages[23]['day_text']);
-
     const filePath ='./img/' + (data.current.is_day ? 'day' : 'night') + '/';
     const fileName = (data.current.is_day ? info.day:info.night) + '.png';
     const imgPath = filePath + fileName;
-    console.log('filePath', filePath + fileName);
 
     const weatherData = {
       name: data.location.name,
